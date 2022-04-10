@@ -45,8 +45,7 @@ nextread:
         mov al, temp
         mov [si], al
         inc si
-        loop nextread
-        
+	cmp al, [si]
         loop nextread
         mov si, offset ntable
         mov bl, [si]
